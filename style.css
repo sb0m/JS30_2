@@ -1,0 +1,79 @@
+/*-------------------------
+	Simple reset
+--------------------------*/
+*{
+	margin:0;
+	padding:0;
+}
+
+
+/*-------------------------
+	General Styles
+--------------------------
+test {
+    #1c2124
+    color: #424c55; rgba(66, 76, 85, 0.5);
+    color: #2e86ab;
+    color: #084c61;
+    color: #a1d2ce;
+    color: #e7ecef;
+}*/
+
+body{
+	font: 11px 'Open Sans', sans-serif;
+	color: #ecebe4;
+	text-align:center;
+    overflow:auto;
+    background-color: #084c61;
+    min-height:100%;
+    background-image: url("bg.JPG");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    border: 30px solid #084c61;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2 rem;
+}
+
+.clock-face {
+    position: relative;
+    width:100%;
+    height:100%;
+    transform: translateY(-3px);
+}
+
+.hand {
+    width: 50%;
+    /*background: #1c2124;*/
+    position: absolute;
+    top: 50%;
+    /*to make possible when rotating the hand that it's 
+     transform-origin: stays in the middle of the clock*/
+    transform-origin: 100%;
+    /* put the hands on 12 all */
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.second-hand {
+    background-color: #424c55;
+    height: 6px;
+}
+
+.min-hand {
+    background-color: #2e86ab;
+    height: 8px;
+}
+
+.hour-hand {
+    background-color: #084c61;
+    height: 10px;
+}
